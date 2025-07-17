@@ -112,7 +112,7 @@ public class ConsoleInputService implements DataInputService {
         });
     }
     
-    private void validateLoanData(LoanData data) {
+    public void validateLoanData(LoanData data) {
         validateVehicleYear(data.vehicleYear(), data.vehicleCondition());
         validateDownPayment(data.downPayment(), data.totalLoanAmount(), data.vehicleCondition());
     }
@@ -126,7 +126,7 @@ public class ConsoleInputService implements DataInputService {
         }
     }
 
-    private void validateDownPayment(long downPayment, long totalLoanAmount, VehicleCondition condition) {
+    public void validateDownPayment(long downPayment, long totalLoanAmount, VehicleCondition condition) {
         double requiredDpPercentage = (condition == VehicleCondition.BARU) ? DP_PERCENTAGE_NEW : DP_PERCENTAGE_USED;
         long minimumDp = (long) (totalLoanAmount * requiredDpPercentage);
 

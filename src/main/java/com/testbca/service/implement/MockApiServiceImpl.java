@@ -13,7 +13,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 public class MockApiServiceImpl implements RemoteDataService {
-    private static final String API_URL = "https://run.mocky.io/v3/9108b1da-beec-409e-ae14-e8091955666c";
+    // URL diperbarui ke endpoint Mocky yang aktif
+    private static final String API_URL = "https://www.mocky.io/v2/5d11a58d310000b23508cd62";
     private final HttpClient httpClient;
 
     public MockApiServiceImpl() {
